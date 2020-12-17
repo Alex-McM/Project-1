@@ -31,7 +31,8 @@ Restaurant perspective
 9am-5pm
 -> bookings 2hr slots?
 
-
+JS-> what is required?
+Buttons 
 
 
 
