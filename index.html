@@ -12,27 +12,23 @@
 </head>
 <body>
 
-<div class="header">
-    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-        <a class="pure-menu-heading" href="">Your Site</a>
-
-        <ul class="pure-menu-list">
-            <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Tour</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sign Up</a></li>
-        </ul>
-    </div>
-</div>
-
 <div class="splash-container">
     <div class="splash">
-        <h1 class="splash-head">Big Bold Text</h1>
+        <h1 class="splash-head">RARA RAMEN SHOP</h1>
         <p class="splash-subhead">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        <div>
+            <label class="btn" for="modal-1">Ramen</label>
+        </div>
         </p>
-        <p>
-            <a href="http://purecss.io" class="pure-button pure-button-primary">Get Started</a>
-        </p>
+        <input class="modal-state" id="modal-1" type="checkbox" />
+            <div class="modal">
+            <label class="modal__bg" for="modal-1"></label>
+            <div class="modal__inner">
+            <label class="modal__close" for="modal-1"></label>
+            <h2>Ramen (/ˈrɑːmən/) (拉麺, ラーメン, rāmen, Japanese pronunciation: [ɾaꜜːmeɴ])</h2>
+            <p><img src="https://thumbs.gfycat.com/FinishedPepperyBrocketdeer-size_restricted.gif" alt="" />(literally: "pulled noodles") is a Japanese noodle soup. It consists of Chinese wheat noodles served in a meat or (occasionally) fish-based broth, often flavored with soy sauce or miso, and uses toppings such as sliced pork (叉焼, chāshū), nori (dried seaweed), menma, and scallions. Nearly every region in Japan has its own variation of ramen, such as the tonkotsu (pork bone broth) ramen of Kyushu and the miso ramen of Hokkaido. Mazemen is a ramen dish that is not served in a soup, but rather with a sauce (such as tare), like noodles that are served with a sweet and sour sauce.</p>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -42,41 +38,59 @@
 
         <div class="pure-g">
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-
-                <h3 class="content-subhead">
-                    <i class="fa fa-rocket"></i>
-                    Get Started Quickly
-                </h3>
-                <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-                </p>
-            </div>
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-                <h3 class="content-subhead">
-                    <i class="fa fa-mobile"></i>
-                    Responsive Layouts
-                </h3>
-                <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-                </p>
-            </div>
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-                <h3 class="content-subhead">
-                    <i class="fa fa-th-large"></i>
-                    Modular
-                </h3>
-                <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-                </p>
-            </div>
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-                <h3 class="content-subhead">
-                    <i class="fa fa-check-square-o"></i>
-                    Plays Nice
-                </h3>
-                <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-                </p>
+                <div>
+                    <div class="carousel">
+                    <ul class="slides">
+                        <input type="radio" name="radio-buttons" id="img-1" checked />
+                        <li class="slide-container">
+                        <div class="slide-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Timisoara_-_Regional_Business_Centre.jpg">
+                        </div>
+                        <div class="carousel-controls">
+                            <label for="img-3" class="prev-slide">
+                            <span>&lsaquo;</span>
+                            </label>
+                            <label for="img-2" class="next-slide">
+                            <span>&rsaquo;</span>
+                            </label>
+                        </div>
+                        </li>
+                        <input type="radio" name="radio-buttons" id="img-2" />
+                        <li class="slide-container">
+                        <div class="slide-image">
+                            <img src="https://content.r9cdn.net/rimg/dimg/db/02/06b291e8-city-14912-171317ad83a.jpg?width=1750&height=1000&xhint=3040&yhint=2553&crop=true">
+                        </div>
+                        <div class="carousel-controls">
+                            <label for="img-1" class="prev-slide">
+                            <span>&lsaquo;</span>
+                            </label>
+                            <label for="img-3" class="next-slide">
+                            <span>&rsaquo;</span>
+                            </label>
+                        </div>
+                        </li>
+                        <input type="radio" name="radio-buttons" id="img-3" />
+                        <li class="slide-container">
+                        <div class="slide-image">
+                            <img src="https://speakzeasy.files.wordpress.com/2015/05/twa_blogpic_timisoara-4415.jpg">
+                        </div>
+                        <div class="carousel-controls">
+                            <label for="img-2" class="prev-slide">
+                            <span>&lsaquo;</span>
+                            </label>
+                            <label for="img-1" class="next-slide">
+                            <span>&rsaquo;</span>
+                            </label>
+                        </div>
+                        </li>
+                        <div class="carousel-dots">
+                        <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+                        <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+                        <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+                        </div>
+                    </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
