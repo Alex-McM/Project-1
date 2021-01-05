@@ -1,41 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramen Shop</title>
-    <nav>
-    </nav>
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <!-- insert css library here -->
-</head>
-<body>
-    <header>
-
-    </header>
-    <main>
-        <div id = about>
-        <h3>Ramen (/ˈrɑːmən/) (拉麺, ラーメン, rāmen, Japanese pronunciation: [ɾaꜜːmeɴ]) (literally: "pulled noodles")</h3>
-        <h4>is a Japanese noodle soup. It consists of Chinese wheat noodles served in a meat or (occasionally) fish-based broth, often flavored with soy sauce or miso, and uses toppings such as sliced pork (叉焼, chāshū), nori (dried seaweed), menma, and scallions.</h4>
-        <p>Ramen shop was founded in 2012 by 4 friends passionate about introducing Melbourne to the flavours of real Japanese Ramen. To do this they set out to find chefs wishing to perfect their ramen skills day by day in their Melbourne restaurant, and share their beautiful soupy creation. Through endless dedication and refined skills, ramen shop delivers the best ramen on the market, a one of a kind experience.</p>
-        </div>
+  <head>
     
-        <div id = gallery>
-
-        </div>
-    <div id = booking>
-
-    </div>
-    <div id = testimonial>
-
-    </div>
-    </main>
-    <footer>
+    <meta charset="utf-8">
+    <title> Reservations </title>
     
-    </footer>
-    <script type="text/javascript" src="js/script.js"></script>
-</body>
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+    
+    <form action="reservation.php" method="post">
+        
+        <div class="elem-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="visitor_name" required>
+        </div>
+        
+        <div class="elem-group">
+          <label for="email">Your E-mail</label>
+          <input type="email" id="email" name="visitor_email" required>
+        </div>
+        
+        <div class="elem-group">
+          <label for="phone">Your Phone</label>
+          <input type="tel" id="phone" name="visitor_phone" placeholder="0448-531-987" required>
+        </div>
+        
+        <div class="elem-group inlined">
+          <label for="adult">Adults</label>
+          <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+        </div>
+        
+        <div class="elem-group inlined">
+          <label for="child">Children</label>
+          <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+        </div>
+        
+        <div class="elem-group inlined">
+          <label for="reservation-date">Reservation Date</label>
+          <input type="date" id="reservation-date" name="reservation" required>
+        </div>
+
+        <div class="elem-group inlined">
+          <label for="appt">Select a time:</label>
+          <input type="time" id="appt" name="appt">
+        </div>
+        
+        
+        
+        <div class="elem-group"></div>
+          <select id="seating-selection" name="room_preference" required>
+              <option value="">Choose a Dinning Room</option>
+              <option value="basement">Basement</option>
+              <option value="main">Main</option>
+              <option value="upstairs">Upstairs</option>
+          </select>
+        </div>
+      
+        <div class="elem-group">
+            <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important (allergies etc)." required></textarea>
+        </div>
+        
+        <button type="submit">Book Table</button>
+      
+    </form>
+  
+      <script type="text/javascript" src="script.js"></script>
+  </body>
+
+
 </html>
