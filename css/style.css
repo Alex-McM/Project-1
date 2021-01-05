@@ -284,3 +284,277 @@ a.pure-button-primary {
         font-size: 300%;
     }
 }
+
+
+/* [Object] Modal
+ * =============================== */
+ .modal {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+    background: rgba(0,0,0, .9);
+    transition: opacity .25s ease;
+  }
+  
+  .modal__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+  }
+  
+  .modal-state {
+    display: none;
+  }
+  
+  .modal-state:checked + .modal {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .modal-state:checked + .modal .modal__inner {
+    top: 0;
+  }
+  
+  .modal__inner {
+    transition: top .25s ease;
+    position: absolute;
+    top: -20%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    margin: auto;
+    overflow: auto;
+    background: #fff;
+    border-radius: 5px;
+    padding: 1em 2em;
+    height: 50%;
+  }
+  
+  .modal__close {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    width: 1.1em;
+    height: 1.1em;
+    cursor: pointer;
+  }
+  
+  .modal__close:after,
+  .modal__close:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 1.5em;
+    background: #ccc;
+    display: block;
+    transform: rotate(45deg);
+    left: 50%;
+    margin: -3px 0 0 -1px;
+    top: 0;
+  }
+  
+  .modal__close:hover:after,
+  .modal__close:hover:before {
+    background: #aaa;
+  }
+  
+  .modal__close:before {
+    transform: rotate(-45deg);
+  }
+  
+  @media screen and (max-width: 768px) {
+      
+    .modal__inner {
+      width: 90%;
+      height: 90%;
+      box-sizing: border-box;
+    }
+  }
+  
+  
+  /* Other
+   * =============================== */
+  body {
+    padding: 1%;
+    font: 1/1.5em sans-serif;
+    text-align: center;
+  }
+  
+  .btn {
+    cursor: pointer;
+    background: #27ae60;
+    display: inline-block;
+    padding: .5em 1em;
+    color: #fff;
+    border-radius: 3px;
+  }
+  
+  .btn:hover,
+  .btn:focus {
+    background: #2ecc71;
+  }
+  
+  .btn:active {
+    background: #27ae60;
+    box-shadow: 0 1px 2px rgba(0,0,0, .2) inset;
+  }
+  
+  .btn--blue {
+    background: #2980b9;
+  }
+  
+  .btn--blue:hover,
+  .btn--blue:focus {
+    background: #3498db;
+  }
+  
+  .btn--blue:active {
+    background: #2980b9;
+  }
+  
+  p img {
+    max-width: 200px;
+    height: auto;
+    float: left;
+    margin: 0 1em 1em 0;
+  }
+
+
+  .carousel {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+ul.slides {
+    display: block;
+    position: relative;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+ul.slides input {
+    display: none; 
+}
+
+
+.slide-container { 
+    display: block; 
+}
+
+.slide-image {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}   
+
+.slide-image img {
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-size: 100px;
+    line-height: 600px;
+    color: #fff;
+}
+
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label{
+    opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+    opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+
+.carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 999;
+    text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+     display: block; 
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+	opacity: 1;
+}
+
+
+input:checked + .slide-container .nav label { display: block; }
