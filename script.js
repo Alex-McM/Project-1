@@ -11,11 +11,9 @@ if(month < 10) {
 }
 
 var dateTomorrow = year + "-" + month + "-" + date;
-var checkinElem = document.querySelector("#reservation-date");
+var reservationElem = document.querySelector("#reservation-date");
 
 
-checkinElem.setAttribute("min", dateTomorrow);
 
-checkinElem.onchange = function () {
-    checkoutElem.setAttribute("min", this.value);
-}
+
+
