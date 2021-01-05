@@ -30,9 +30,16 @@ fixed footer:
 Restaurant perspective
 9am-5pm
 -> bookings 2hr slots?
+-> booking/seating limits
 
 JS-> what is required?
 Buttons 
+
+
+
+conditionals
+weather api - for temps within x ranges suggest attire.
+calendar api - for holidays warn user there will be a surcharge on card payments due to being a holiday.
 
 
 
