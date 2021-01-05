@@ -1,0 +1,27 @@
+.mybox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1ch;
+   
+   
+    
+  }
+
+  .border{
+      /* border-top: solid 2px rgb(0, 61, 23); */
+      border-bottom: solid 1px rgb(93, 93, 93); 
+     
+  }
+
+  .icons{
+    font-size: 30px;
+    margin-top: 10px;
+  }
+
+  .bgclor{
+      background-color: black;
+  }
+
+  
