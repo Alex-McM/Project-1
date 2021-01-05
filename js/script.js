@@ -28,6 +28,8 @@ function getWeatherInformation(UnixDate) {
     selectedDate.addHours(2);
 
     $.ajax(weatherAPIurl).then(function (response) {
+        console.log(response);
+
         // Stores the weather data for the date the user selected if it is found
         var selectedDateData = null;
 
@@ -45,8 +47,41 @@ function getWeatherInformation(UnixDate) {
 
         // If weather data was found for the selected date...
         if (selectedDateData != null) {
-            weatherNotificationDiv.text("We found weather information for the selected date!");
+
+            var weatherNotification = "";
+
+            // Get the weather forecasted that day
+            var weatherMain = selectedDateData.weather[0].main;
+            
+            // Set the notification message based on the weather forecast
+            switch (weatherMain) {
+                case "Snow":
+                    weatherNotification = "Snow is forecasted, so rug up in your warmest coat and we'll find you a table inside!";
+                    break;
+                case "Thunderstorm":
+                    weatherNotification = "There is a Thunderstorm forecast that day, wear something warm and drive safe!";
+                    break;
+                case "Drizzle":
+                    weatherNotification = "A drizzle is forecasted that day, wear a jacket and book a table inside!";
+                    break;
+                case "Rain":
+                    weatherNotification = "Rain is forecast, wear a coat and drive safe!";
+                    break;
+                case "Clear":
+                    weatherNotification = "The weather that day is forecasted to be clear!";
+                    break;
+                case "Clouds":
+                    weatherNotification = "The weather that day is forecasted to be cloudy, could get chilly so bring a jacket!";
+                    break;
+                default:
+                    break;
+            }
+
+            // Display the weather notification
+            weatherNotificationDiv.text(weatherNotification);
+
         } else {
+            // Display a message saying the information could not be found
             weatherNotificationDiv.text("Could not find weather information for the selected date!");
         }
     });
