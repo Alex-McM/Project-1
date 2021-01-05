@@ -1,5 +1,14 @@
 const weatherAPIKey = "5ef88dc51d3ee5b81c89c1e9a4e916a9";
 
+var weatherNotificationDiv = $("#weatherNotification");
+
+init();
+
+// This function is ran when the js loads
+function init() {
+    weatherNotificationDiv.hide();
+}
+
 // This event is triggered when somebody selects a new date
 document.querySelector("#reservation-date").addEventListener('change', function (event){
     // Get the selected date as a UNIX timestamp
@@ -32,11 +41,13 @@ function getWeatherInformation(UnixDate) {
             }
         }
 
+        weatherNotificationDiv.show(1000);
+
         // If weather data was found for the selected date...
         if (selectedDateData != null) {
-            console.log("We found weather information for the selected date!");
+            weatherNotificationDiv.text("We found weather information for the selected date!");
         } else {
-            console.log("Could not find weather information for the selected date!");
+            weatherNotificationDiv.text("Could not find weather information for the selected date!");
         }
     });
 
