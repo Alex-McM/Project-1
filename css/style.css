@@ -559,10 +559,15 @@ input#img-6:checked ~ .carousel-dots label#img-dot-6 {
 
 input:checked + .slide-container .nav label { display: block; }
 
-.gentle-flex {
+/* .gentle-flex {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1ch;
+  } */
+
+  .border{
+    /* border-top: solid 2px rgb(0, 61, 23); */
+    border-bottom: solid 1px rgb(93, 93, 93); 
   }
