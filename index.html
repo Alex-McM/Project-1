@@ -1,340 +1,308 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title> Reservations </title>
-        
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A layout example that shows off a responsive product landing page.">
-    <title>Landing Page &ndash; Layout Examples &ndash; Pure</title>
-    <!-- <link rel="stylesheet" href="/css/pure/pure-min.css">
-    <link rel="stylesheet" href="/css/pure/grids-responsive-min.css">
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"> -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-</head>
-<body>
+    <head>
+        <meta charset="utf-8">
+        <title> Reservations </title>
+            
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A layout example that shows off a responsive product landing page.">
+        <title>Landing Page &ndash; Layout Examples &ndash; Pure</title>
+        <!-- <link rel="stylesheet" href="/css/pure/pure-min.css">
 
-<div class="splash-container">
-    <div class="splash">
-        <h1 class="splash-head">RARA RAMEN SHOP</h1>
-        <p class="splash-subhead">
-        <div>
-            <label class="btn" for="modal-1">Ramen</label>
-        </div>
-        </p>
-        <input class="modal-state" id="modal-1" type="checkbox" />
-            <div class="modal">
-            <label class="modal__bg" for="modal-1"></label>
-            <div class="modal__inner">
-            <label class="modal__close" for="modal-1"></label>
-            <h2>Ramen (/ˈrɑːmən/) (拉麺, ラーメン, rāmen, Japanese pronunciation: [ɾaꜜːmeɴ])</h2>
-            <p><img src="https://thumbs.gfycat.com/FinishedPepperyBrocketdeer-size_restricted.gif" alt="" />(literally: "pulled noodles") is a Japanese noodle soup. It consists of Chinese wheat noodles served in a meat or (occasionally) fish-based broth, often flavored with soy sauce or miso, and uses toppings such as sliced pork (叉焼, chāshū), nori (dried seaweed), menma, and scallions. Nearly every region in Japan has its own variation of ramen, such as the tonkotsu (pork bone broth) ramen of Kyushu and the miso ramen of Hokkaido. Mazemen is a ramen dish that is not served in a soup, but rather with a sauce (such as tare), like noodles that are served with a sweet and sour sauce.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="content-wrapper">
-    <div class="content">
-        <h2 class="content-head is-center">Excepteur sint occaecat cupidatat.</h2>
-
-        <div class="pure-g">
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+        <link rel="stylesheet" href="/css/pure/grids-responsive-min.css"> -->
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+        <!-- Bulma -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+        <!--  Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <!-- google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/pure/grids-responsive-min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="splash-container">
+            <div class="splash">
+                <h1 class="splash-head">RARA RAMEN SHOP</h1>
+                <p class="splash-subhead">
                 <div>
-                    <div class="carousel">
-                    <ul class="slides">
-                        <input type="radio" name="radio-buttons" id="img-1" checked />
-                        <li class="slide-container">
-                        <div class="slide-image">
-                            <img src="assets/Ramen1.jpg">
-                        </div>
-                        <div class="carousel-controls">
-                            <label for="img-3" class="prev-slide">
-                            <span>&lsaquo;</span>
-                            </label>
-                            <label for="img-2" class="next-slide">
-                            <span>&rsaquo;</span>
-                            </label>
-                        </div>
-                        </li>
-                        <input type="radio" name="radio-buttons" id="img-2" />
-                        <li class="slide-container">
-                        <div class="slide-image">
-                            <img src="assets/Ramen2.jpg">
-                        </div>
-                        <div class="carousel-controls">
-                            <label for="img-1" class="prev-slide">
-                            <span>&lsaquo;</span>
-                            </label>
-                            <label for="img-3" class="next-slide">
-                            <span>&rsaquo;</span>
-                            </label>
-                        </div>
-                        </li>
-                        <input type="radio" name="radio-buttons" id="img-3" />
-                        <li class="slide-container">
-                        <div class="slide-image">
-                            <img src="assets/Ramen3.jpg">
-                        </div>
-                        <div class="carousel-controls">
-                            <label for="img-2" class="prev-slide">
-                            <span>&lsaquo;</span>
-                            </label>
-                            <label for="img-4" class="next-slide">
-                            <span>&rsaquo;</span>
-                            </label>
-                        </div>
-                        </li>
-                        <input type="radio" name="radio-buttons" id="img-4" />
-                        <li class="slide-container">
-                        <div class="slide-image">
-                            <img src="assets/Ramen4.jpg">
-                        </div>
-                        <div class="carousel-controls">
-                            <label for="img-3" class="prev-slide">
-                            <span>&lsaquo;</span>
-                            </label>
-                            <label for="img-5" class="next-slide">
-                            <span>&rsaquo;</span>
-                            </label>
-                        </div>
-                        </li>
-                        <input type="radio" name="radio-buttons" id="img-5" />
-                        <li class="slide-container">
-                        <div class="slide-image">
-                            <img src="assets/Ramen5.jpg">
-                        </div>
-                        <div class="carousel-controls">
-                            <label for="img-4" class="prev-slide">
-                            <span>&lsaquo;</span>
-                            </label>
-                            <label for="img-6" class="next-slide">
-                            <span>&rsaquo;</span>
-                            </label>
-                        </div>
-                        </li>
-                        <input type="radio" name="radio-buttons" id="img-6" />
-                        <li class="slide-container">
-                        <div class="slide-image">
-                            <img src="assets/Ramen6.jpg">
-                        </div>
-                        <div class="carousel-controls">
-                            <label for="img-5" class="prev-slide">
-                            <span>&lsaquo;</span>
-                            </label>
-                            <label for="img-1" class="next-slide">
-                            <span>&rsaquo;</span>
-                            </label>
-                        </div>
-                        </li>
-                        <div class="carousel-dots">
-                        <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
-                        <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
-                        <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
-                        <label for="img-4" class="carousel-dot" id="img-dot-4"></label>
-                        <label for="img-5" class="carousel-dot" id="img-dot-5"></label>
-                        <label for="img-6" class="carousel-dot" id="img-dot-6"></label>
-                        </div>
-                    </ul>
+                    <label class="btn" for="modal-1">Ramen</label>
+                </div>
+                </p>
+                <input class="modal-state" id="modal-1" type="checkbox" />
+                    <div class="modal">
+                    <label class="modal__bg" for="modal-1"></label>
+                    <div class="modal__inner">
+                    <label class="modal__close" for="modal-1"></label>
+                    <h2>Ramen (/ˈrɑːmən/) (拉麺, ラーメン, rāmen, Japanese pronunciation: [ɾaꜜːmeɴ])</h2>
+                    <p><img src="https://thumbs.gfycat.com/FinishedPepperyBrocketdeer-size_restricted.gif" alt="" />(literally: "pulled noodles") is a Japanese noodle soup. It consists of Chinese wheat noodles served in a meat or (occasionally) fish-based broth, often flavored with soy sauce or miso, and uses toppings such as sliced pork (叉焼, chāshū), nori (dried seaweed), menma, and scallions. Nearly every region in Japan has its own variation of ramen, such as the tonkotsu (pork bone broth) ramen of Kyushu and the miso ramen of Hokkaido. Mazemen is a ramen dish that is not served in a soup, but rather with a sauce (such as tare), like noodles that are served with a sweet and sour sauce.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="ribbon l-box-lrg pure-g">
-        <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
-            <img width="300" alt="File Icons" class="pure-img-responsive" src="/img/common/file-icons.png">
-        </div>
-        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+        <div class="content-wrapper">
+            <div class="content">
+                <h2 class="content-head is-center">Excepteur sint occaecat cupidatat.</h2>
 
-            <h2 class="content-head content-head-ribbon">Laboris nisi ut aliquip.</h2>
+                <div class="pure-g">
+                    <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                        <div>
+                            <div class="carousel">
+                            <ul class="slides">
+                                <input type="radio" name="radio-buttons" id="img-1" checked />
+                                <li class="slide-container">
+                                <div class="slide-image">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Timisoara_-_Regional_Business_Centre.jpg">
+                                </div>
+                                <div class="carousel-controls">
+                                    <label for="img-3" class="prev-slide">
+                                    <span>&lsaquo;</span>
+                                    </label>
+                                    <label for="img-2" class="next-slide">
+                                    <span>&rsaquo;</span>
+                                    </label>
+                                </div>
+                                </li>
+                                <input type="radio" name="radio-buttons" id="img-2" />
+                                <li class="slide-container">
+                                <div class="slide-image">
+                                    <img src="https://content.r9cdn.net/rimg/dimg/db/02/06b291e8-city-14912-171317ad83a.jpg?width=1750&height=1000&xhint=3040&yhint=2553&crop=true">
+                                </div>
+                                <div class="carousel-controls">
+                                    <label for="img-1" class="prev-slide">
+                                    <span>&lsaquo;</span>
+                                    </label>
+                                    <label for="img-3" class="next-slide">
+                                    <span>&rsaquo;</span>
+                                    </label>
+                                </div>
+                                </li>
+                                <input type="radio" name="radio-buttons" id="img-3" />
+                                <li class="slide-container">
+                                <div class="slide-image">
+                                    <img src="https://speakzeasy.files.wordpress.com/2015/05/twa_blogpic_timisoara-4415.jpg">
+                                </div>
+                                <div class="carousel-controls">
+                                    <label for="img-2" class="prev-slide">
+                                    <span>&lsaquo;</span>
+                                    </label>
+                                    <label for="img-1" class="next-slide">
+                                    <span>&rsaquo;</span>
+                                    </label>
+                                </div>
+                                </li>
+                                <div class="carousel-dots">
+                                <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+                                <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+                                <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+                                </div>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor.
-            </p>
-        </div>
-    </div>
+            <div class="ribbon l-box-lrg pure-g">
+                <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+                    <img width="300" alt="File Icons" class="pure-img-responsive" src="/img/common/file-icons.png">
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
 
-    <div class="content">
-        <h2 class="content-head is-center">Place your booking below.</h2>
+                    <h2 class="content-head content-head-ribbon">Laboris nisi ut aliquip.</h2>
 
-        <div class="pure-g">
-            <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
-                <fieldset>
-                    <form class="pure-form pure-form-stacked">
-                        <div class="elem-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="visitor_name" required>
-                        </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor.
+                    </p>
+                </div>
+            </div>
+
+            <div class="content">
+                <h2 class="content-head is-center">Place your booking below.</h2>
+
+                <div class="pure-g">
+                    <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
+                        <fieldset>
+                            <form class="pure-form pure-form-stacked">
+                                <div class="elem-group">
+                                    <label for="name">Your Name</label>
+                                    <input type="text" id="name" name="visitor_name" required>
+                                </div>
+                                    
+                                <div class="elem-group">
+                                    <label for="email">Your E-mail</label>
+                                    <input type="email" id="email" name="visitor_email" required>
+                                </div>
+                                    
+                                <div class="elem-group">
+                                    <label for="phone">Your Phone</label>
+                                    <input type="tel" id="phone" name="visitor_phone" placeholder="0448-531-987" required>
+                                </div>
+                                    
+                                <div class="elem-group inlined">
+                                    <label for="adult">Adults</label>
+                                    <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+                                </div>
+                                    
+                                <div class="elem-group inlined">
+                                    <label for="child">Children</label>
+                                    <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+                                </div>
+                                    
+                                <div class="elem-group inlined">
+                                    <label for="reservation-date">Reservation Date</label>
+                                    <input type="date" id="reservation-date" name="reservation" required>
+                                </div>
+
+                                <div class="elem-group inlined" id="weatherNotification">
+                                    <!-- Notification -->
+                                </div>
                             
-                        <div class="elem-group">
-                            <label for="email">Your E-mail</label>
-                            <input type="email" id="email" name="visitor_email" required>
-                        </div>
-                            
-                        <div class="elem-group">
-                            <label for="phone">Your Phone</label>
-                            <input type="tel" id="phone" name="visitor_phone" placeholder="0448-531-987" required>
-                        </div>
-                            
-                        <div class="elem-group inlined">
-                            <label for="adult">Adults</label>
-                            <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
-                        </div>
-                            
-                        <div class="elem-group inlined">
-                            <label for="child">Children</label>
-                            <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
-                        </div>
-                            
-                        <div class="elem-group inlined">
-                            <label for="reservation-date">Reservation Date</label>
-                            <input type="date" id="reservation-date" name="reservation" required>
-                        </div>
-                    
-                        <div class="elem-group inlined">
-                            <label for="appt">Select a time:</label>
-                            <input type="time" id="appt" name="appt">
-                        </div>
-                            
-                            
-                            
-                        <div class="elem-group">
-                            <select id="seating-selection" name="room_preference" required>
-                                <option value="">Choose a Dinning Room</option>
-                                <option value="basement">Basement</option>
-                                <option value="main">Main</option>
-                                <option value="upstairs">Upstairs</option>
-                            </select>
-                        </div>
+                                <div class="elem-group inlined">
+                                    <label for="appt">Select a time:</label>
+                                    <input type="time" id="appt" name="appt">
+                                </div>
+                                    
+                                    
+                                    
+                                <div class="elem-group">
+                                    <select id="seating-selection" name="room_preference" required>
+                                        <option value="">Choose a Dinning Room</option>
+                                        <option value="basement">Basement</option>
+                                        <option value="main">Main</option>
+                                        <option value="upstairs">Upstairs</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="elem-group">
+                                    <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important (allergies etc)." required></textarea>
+                                </div>
+                                <button type="submit">Book Table</button>
+                                                        
+                            </form>
+                        </fieldset>
+                    </div>
+
+                    <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6304.101699534204!2d144.9568427317127!3d-37.812277912384765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642caf37771c5%3A0x834e664d24dced61!2sCBD%2C%20Melbourne%20VIC%203000!5e0!3m2!1sen!2sau!4v1609911803961!5m2!1sen!2sau" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+
+                    <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+                        <p>Our customers speak for us</p>
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-3-5 testimonials">
+
                         
-                        <div class="elem-group">
-                            <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important (allergies etc)." required></textarea>
+                        <div class="tbox">
+                            <p>Wow. Eclectic. Flavoursome. Laid back. Daring. Instant favourite of ours. Ate here twice in one day because we wanted to try all of whats on the menu. Its almost too good NOT to share!</p>
+                            <P class="star">&#9733 &#9733 &#9733 &#9733 &#9733</P>
+                            <p>- Tammara I.</p>
                         </div>
-                        <button type="submit">Book Table</button>
-                                                
-                    </form>
-                </fieldset>
-            </div>
-
-            <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6304.101699534204!2d144.9568427317127!3d-37.812277912384765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642caf37771c5%3A0x834e664d24dced61!2sCBD%2C%20Melbourne%20VIC%203000!5e0!3m2!1sen!2sau!4v1609911803961!5m2!1sen!2sau" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            </div>
-
-            <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
-                <p>Our customers speak for us</p>
-            </div>
-
-            <div class="pure-u-1 pure-u-md-3-5 testimonials">
-
-                
-                <div class="tbox">
-                    <p>Wow. Eclectic. Flavoursome. Laid back. Daring. Instant favourite of ours. Ate here twice in one day because we wanted to try all of whats on the menu. Its almost too good NOT to share!</p>
-                    <P class="star">&#9733 &#9733 &#9733 &#9733 &#9733</P>
-                    <p>- Tammara I.</p>
-                </div>
-            
-                <div class="tbox">
-                    <p>This is the best Restaurant  in the surrounding area. Consistently good food, friendly service, chilled atmosphere and value for money. It's nice to go to a place where the owners' passion for what they do is evident in all aspects of their business, particularly the food!</p>
-                    <P class="star">&#9733 &#9733 &#9733 &#9733 &#9733</P>
-                    <p>- Floris V.</p>
-                </div>
-            
-            
-                <div class="tbox">
-                    <p>"The atmosphere is cozy. The food is authentic. The customer service is excellent. We are regular customers, and we tried most of the dishes whenever we dined in. Will come back again!"</p>
-                    <P class="star">&#9733 &#9733 &#9733 &#9733 &#9733</P>
-                    <p>- Carlin B.</p>
-                </div>
-    
-    
-                <div class="tbox">
-                    <p>The food here is amazing. What I loved most if that they have 4 pages of the menu dedicated to vegetarian and vegan dishes. There is so much to choose from both for meat and veggie lovers. The prices are also very reasonable. I will definitely come back.</p>
-                    <P class="star">&#9733 &#9733 &#9733 &#9733 &#9733</P>
-                    <p>- Eve V.</p>
-                </div>
-
-            </div>
-
-            <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
-            
-                <div class="columns has-text-centered has-background-grey-lighter myfont">
-                    <div class="column">
-                    <h2 class="title">JOIN OUR EAT WELL, BE WELL CULTURE.</h2>
-                    </div>
-                </div>
-
-                <div class="columns has-text-centered has-background-grey-lighter">
-                    <div class="column is-full">
-                    <h2 class="is-size-5">Stay up-to-date with our new openings, upcoming events, seasonal specials, and
-                    promotions</h2>
-                    </div>
-                </div>
-
-                <div class="columns is-centered is-full has-background-grey-lighter pb-3">
-                    <input type="text" placeholder="Enter your email address">
-                    <div><button class="button is-white ">Sign me up</button></div>
-                    </div>
-                <div class="columns is-centered has-text-primary-dark has-background-grey-darker has-text-white is-full border">
-                    <div class="column is-gaples has-text-centered is-1 is-size-4">
-                    <i class="fab fa-facebook"></i>
-                </div>
-
-                <div class="column is-gaples has-text-centered is-1 is-size-4">
-                    <i class="fab fa-instagram"></i>
-                    </div>
-                    <div class="column is-gaples has-text-centered is-1 is-size-4">
-                    <i class="fab fa-twitter-square"></i>
-                    </div>
-                    <div class="column is-gaples has-text-centered is-1 is-size-4">
-                    <i class="fab fa-pinterest-square"></i>
-                    </div>
-                </div>
-
-                <div class="columns is-centered has-background-grey-darker has-text-white border">
-                    <div class="column has-text-centered is-1 is-size-7 has-text-weight-bold">
-                    <p>HOME</p>
-                    </div>
-                    <div class="column has-text-centered is-1 is-size-7 has-text-weight-bold">
-                    <p>MENU</p>
-                    </div>
-                    <div class="column has-text-centered is-1 is-size-7 has-text-weight-bold">
-                    <p>STORY</p>
-                    </div>
-                    <div class="column has-text-centered is-1 is-size-7 has-text-weight-bold">
-                    <P>PROMOTIONS</P>
-                    </div>
-                </div>
-
-                <div class="columns is-centered has-background-grey-darker has-text-white">
-                    <div class="column has-text-centered is-1 is-size-7 has-text-weight-normal">
-                    <p>CONTACT US</p>
-                    </div>
-                    <div class="column has-text-centered is-2 is-size-7 has-text-weight-normal">
-                    <p><i class="fas fa-phone-square"></i>  0410 450 270</p>
-                    </div>
-                    <div class="column has-text-centered is-2 is-size-7 has-text-weight-normal">
-                    <P><i class="far fa-envelope"></i> rara_ramenshop@gmail.com</P>
-                    </div>
-                </div>
                     
+                        <div class="tbox">
+                            <p>This is the best Restaurant  in the surrounding area. Consistently good food, friendly service, chilled atmosphere and value for money. It's nice to go to a place where the owners' passion for what they do is evident in all aspects of their business, particularly the food!</p>
+                            <P class="star">&#9733 &#9733 &#9733 &#9733 &#9733</P>
+                            <p>- Floris V.</p>
+                        </div>
+                    
+                    
+                        <div class="tbox">
+                            <p>"The atmosphere is cozy. The food is authentic. The customer service is excellent. We are regular customers, and we tried most of the dishes whenever we dined in. Will come back again!"</p>
+                            <P class="star">&#9733 &#9733 &#9733 &#9733 &#9733</P>
+                            <p>- Carlin B.</p>
+                        </div>
             
+            
+                        <div class="tbox">
+                            <p>The food here is amazing. What I loved most if that they have 4 pages of the menu dedicated to vegetarian and vegan dishes. There is so much to choose from both for meat and veggie lovers. The prices are also very reasonable. I will definitely come back.</p>
+                            <P class="star">&#9733 &#9733 &#9733 &#9733 &#9733</P>
+                            <p>- Eve V.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+                    
+                        <div class="columns has-text-centered has-background-grey-lighter myfont">
+                            <div class="column">
+                            <h2 class="title">JOIN OUR EAT WELL, BE WELL CULTURE.</h2>
+                            </div>
+                        </div>
+
+                        <div class="columns has-text-centered has-background-grey-lighter">
+                            <div class="column is-full">
+                            <h2 class="is-size-5">Stay up-to-date with our new openings, upcoming events, seasonal specials, and
+                            promotions</h2>
+                            </div>
+                        </div>
+
+                        <div class="columns is-centered is-full has-background-grey-lighter pb-3">
+                            <input type="text" placeholder="Enter your email address">
+                            <div><button class="button is-white ">Sign me up</button></div>
+                            </div>
+                        <div class="columns is-centered has-text-primary-dark has-background-grey-darker has-text-white is-full border">
+                            <div class="column is-gaples has-text-centered is-1 is-size-4">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+
+                        <div class="column is-gaples has-text-centered is-1 is-size-4">
+                            <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="column is-gaples has-text-centered is-1 is-size-4">
+                            <i class="fab fa-twitter-square"></i>
+                            </div>
+                            <div class="column is-gaples has-text-centered is-1 is-size-4">
+                            <i class="fab fa-pinterest-square"></i>
+                            </div>
+                        </div>
+
+                        <div class="columns is-centered has-background-grey-darker has-text-white border">
+                            <div class="column has-text-centered is-1 is-size-7 has-text-weight-bold">
+                            <p>HOME</p>
+                            </div>
+                            <div class="column has-text-centered is-1 is-size-7 has-text-weight-bold">
+                            <p>MENU</p>
+                            </div>
+                            <div class="column has-text-centered is-1 is-size-7 has-text-weight-bold">
+                            <p>STORY</p>
+                            </div>
+                            <div class="column has-text-centered is-1 is-size-7 has-text-weight-bold">
+                            <P>PROMOTIONS</P>
+                            </div>
+                        </div>
+
+                        <div class="columns is-centered has-background-grey-darker has-text-white">
+                            <div class="column has-text-centered is-1 is-size-7 has-text-weight-normal">
+                            <p>CONTACT US</p>
+                            </div>
+                            <div class="column has-text-centered is-2 is-size-7 has-text-weight-normal">
+                            <p><i class="fas fa-phone-square"></i>  0410 450 270</p>
+                            </div>
+                            <div class="column has-text-centered is-2 is-size-7 has-text-weight-normal">
+                            <P><i class="far fa-envelope"></i> rara_ramenshop@gmail.com</P>
+                            </div>
+                        </div>
+                            
+                    
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer l-box is-center">
+                LAPD Developers
             </div>
         </div>
+    </body>
 
-    </div>
-
-    <div class="footer l-box is-center">
-        LAPD Developers
-    </div>
-
-</div>
     <script src="js/script.js"></script>
-</body>
+
 </html>
