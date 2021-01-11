@@ -21,7 +21,7 @@ document.querySelector("#reservation-date").addEventListener('change', function 
 
 // This function will get weather information for the city passed to it
 function getWeatherInformation(UnixDate) {
-    var weatherAPIurl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + 37.8136 + "&lon=" + 144.9631 + "&exclude=current,minutely,hourly,alerts&appid=" + weatherAPIKey;
+    var weatherAPIurl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + -37.8136 + "&lon=" + 144.9631 + "&exclude=current,minutely,hourly,alerts&appid=" + weatherAPIKey;
 
     // Convert the date input to a date time and add 2 hours
     var selectedDate = new Date(UnixDate);

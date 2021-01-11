@@ -598,6 +598,26 @@ input:checked + .slide-container .nav label { display: block; }
     color: gold;
 }
 
+a{
 
+ 
+  Text-Decoration: None !important; 
+  color: white;
+ 
+}
+
+a:hover{
+    color: gold;
+}
+
+#weatherNotification{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.294);
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    
+}
 
 /* ...................... */
