@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5b51d3a25f.js" crossorigin="anonymous"></script>
+    
+    <style>
+    html {
+    background-color:black;
+    background-image: url(assets/background-adare-restaurant.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.textStyle{
+  font-family: 'Sofia', cursive;
+  text-decoration: underline;
+}
+
+.bgColor{
+  background-color: #18947d69;
+}
+
+.pointer {cursor: pointer;}
+  </style>
+  </head>
+
+  <body>
+  <section class="section has-text-centered ">
+    <div class="container ">
+      <h1 class="title has-text-white is-size-1">
+        <i class="fas fa-utensils"></i> MENU <i class="fas fa-utensils"></i>
+      </h1>
+      
+    </div>
+  </section>
+
+  <div class="columns has-text-white">
+    <div class="column has-text-centered">
+        <h1 class="is-size-2 mb-3 textStyle">Appertizer</h3>
+          <p id="377570" class="mb-2 is-size-5 pointer">Oven-Roasted Chicken Quesadilla</p>
+          <p id="422276" class="mb-2 is-size-5 pointer">BBQ Caesar Wings</p>
+          <p id="400025" class="mb-2 is-size-5 pointer">Chicken Super Nachos</p>
+          <p id="298504" class="mb-2 is-size-5 pointer">Beef & Bean Tostada</p>
+          <p id="254177" class="mb-2 is-size-5 pointer">Buffalo Burnin Hot, Crispy Bone In Wings</p>
+    </div>
+    <div class="column has-text-centered">
+        <h1 class="is-size-2 mb-3 textStyle">Salad</h3>
+          <p id="273066" class="mb-2 is-size-5 pointer">Salad Ole</p>
+          <p id="331818" class="mb-2 is-size-5 pointer">Famous House Salad</p>
+          <p id="380960" class="mb-2 is-size-5 pointer">Side Salad</p>
+          <p id="323998" class="mb-2 is-size-5 pointer">Sesame Salad w/ Salmon</p>
+          <p id="364747" class="mb-2 is-size-5 pointer">Spring Salad</p>
+    </div>
+    <div class="column has-text-centered">
+        <h1 class="is-size-2 mb-3 textStyle" >Main Course</h3>
+            <p id="345310" class="mb-2 is-size-5 pointer">Double Shrimp Pasta</p>
+            <p id="377635" class="mb-2 is-size-5 pointer">Butter Chicken Fettuccini</p>
+            <p id="351347" class="mb-2 is-size-5 pointer">Sushi and Sashimi Combo</p>
+            <p id="398640" class="mb-2 is-size-5 pointer">Garlic Naan Bread - Side for Butter Chicken</p>
+            <p id="390925" class="mb-2 is-size-5 pointer">Macaroni and Cheese</p>
+    </div>
+    <div class="column has-text-centered">
+        <h1 class="is-size-2 mb-3 textStyle"> Dessert</h3>
+          <p id="231980" class="mb-2 is-size-5 pointer">Oreo Cookie Hand-Scooped Ice Cream Malt</p>
+          <p id="380090" class="mb-2 is-size-5 pointer">Chocolate Sticky Toffee Pudding</p>
+          <p id="261488" class="mb-2 is-size-5 pointer">Homestyle Banana Pudding</p>
+          <p id="244316" class="mb-2 is-size-5 pointer">Chocolate Ice Cream, East of Mississippi</p>
+          <p id="259378" class="mb-2 is-size-5 pointer">Tapioca Pudding</p> 
+          
+    </div>
+  </div>
+
+  
+
+
+  <script>
+    
+    var viewD = $('.apend')
+
+    $('p').click(function (event) {
+      $('.displayInfo').empty()
+    var itemId = event.target.id;
+    var target = $(this)
+    console.log(itemId)
+    var queryURL = "https://api.spoonacular.com/food/menuItems/"+itemId+"?apiKey=0066853ad3344bb683eb708a18ff2b3c";
+    var apiKey = "0066853ad3344bb683eb708a18ff2b3c"
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+      
+      console.log(response)
+
+      var viewD = $("<div>").addClass('displayInfo bgColor has-text-warning mt-3 is-size-6')
+        var itemImg = $('<img>').attr('src',response.images[2])
+        viewD.append(itemImg)
+
+      console.log(response.images[2]);
+
+
+
+      var nutri = response.nutrition.nutrients
+      
+      for (let i = 0; i < nutri.length; i++) {
+          console.log(nutri[i].title)
+
+          var newP = $('<P>').text(nutri[i].title + " - " + nutri[i].amount+ " " + nutri[i].unit ).addClass("mt-3")
+            viewD.append(newP)
+            // target.append(newP)
+
+          console.log(nutri[i].percentOfDailyNeeds)
+          console.log(nutri[i].amount)
+          
+      }
+
+      target.append(viewD)
+
+    });
+    })
+
+  </script>
+  </body>
+</html>
