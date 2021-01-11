@@ -13,6 +13,7 @@ THEN ensure all fields are filled correctly
 WHEN fields are correctly filled and submitted, give a notification of confirmation
 WHEN I click to view menu
 THEN show the menu to me
+```
 
 # Links
 https://github.com/Alex-McM/Project-1/
